@@ -1,7 +1,7 @@
 """
 The original code was written in 2022
 
-However the file has been accidently deleted and then rewritten through some dodge screenshot and memory
+However the file has been accidently deleted and then rewritten through some dodgy screenshot and memory
 
 May contain bugs
 
@@ -34,7 +34,7 @@ def genCoord(grid):
     y = random.randint(0,3)
     occupied = True
     while occupied == True:
-        if grid[x][y] == '*':
+        if grid[x][y] == '*':   # This line reports index out of range occationally, it works about 50% of the time
             occupied = False
             return x,y
         else:
