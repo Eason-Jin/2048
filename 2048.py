@@ -1,9 +1,5 @@
 """
-The original code was written in 2022
-
-However the file has been accidently deleted and then rewritten through some dodgy screenshot and memory
-
-May contain bugs
+The game works most of the time but throws an index out of range error occationally
 
 """
 
@@ -34,7 +30,7 @@ def genCoord(grid):
     y = random.randint(0,3)
     occupied = True
     while occupied == True:
-        if grid[x][y] == '*':   # This line reports index out of range occationally, it works about 50% of the time
+        if grid[x][y] == '*':   # This line reports index out of range occationally
             occupied = False
             return x,y
         else:
