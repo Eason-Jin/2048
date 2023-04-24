@@ -1,5 +1,5 @@
 """
-The game works most of the time but throws an index out of range error occationally
+A game of 2048 made by Eason Jin
 
 """
 
@@ -28,14 +28,15 @@ def genNum():
 def genCoord(grid):
     x = random.randint(0,3)
     y = random.randint(0,3)
+    print(x,y)
     occupied = True
     while occupied == True:
-        if grid[x][y] == '*':   # This line reports index out of range occationally
+        if grid[x][y] == '*':
             occupied = False
             return x,y
         else:
-            x = random.randint(0,4)
-            y = random.randint(0,4)
+            x = random.randint(0,3)
+            y = random.randint(0,3)
 
 def checkRow(grid):
     flag = True
